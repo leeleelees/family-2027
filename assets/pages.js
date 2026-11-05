@@ -1,5 +1,16 @@
 (()=>{
  const id=document.body.dataset.region;
+ const controls=document.querySelector('.controls');controls.classList.add('trip-settings');
+ if(id)document.querySelector('#region').before(controls);
+ else document.querySelector('.finder-intro').after(controls);
+ for(const key of ['airport','nights']){
+  try{const saved=localStorage.getItem('family2027-'+key),select=document.getElementById(key);if([...select.options].some(o=>o.value===saved))select.value=saved}catch{}
+ }
+ function updateTripSummaries(){
+  const {airport,nights}=state();
+  document.querySelectorAll('.finder-result').forEach(card=>{const d=DESTINATIONS.find(d=>d.id===card.dataset.result);let summary=card.querySelector('.finder-trip-summary');if(!summary){summary=document.createElement('p');summary.className='finder-trip-summary';card.querySelector('.finder-reason').after(summary)}summary.textContent=`${airport?'인천':'김해'} 출발 · ${nights===1?'3박 4일':'4박 5일'} · 6명 계획 예산 ${d.budget[airport][nights]}만원`;});
+ }
+ controls.addEventListener('change',()=>{for(const key of ['airport','nights']){try{localStorage.setItem('family2027-'+key,document.getElementById(key).value)}catch{}}updateTripSummaries()});
  const href=id=>`${id}.html`;
  document.addEventListener('click',e=>{
   const hit=e.target.closest('[data-map],[data-region]:not(body),[data-place],a[href^="#place-"]');if(!hit)return;
@@ -65,7 +76,8 @@
    const gallery=chapter.querySelector('.region-gallery');if(gallery)gallery.before(pair);
   }
  }
- const prev=renderRegion;renderRegion=function(){prev();layout()};layout();
+ const prev=renderRegion;renderRegion=function(){prev();layout()};renderRegion();updateTripSummaries();
+ new MutationObserver(updateTripSummaries).observe(document.querySelector('#finder-results'),{childList:true});
  new MutationObserver(()=>{document.querySelectorAll('.finder-jump[href^="#place-"]').forEach(a=>{a.href=href(a.hash.slice(7));a.textContent='이 지역 자세히 보기 ↗'})}).observe(document.querySelector('#finder-results'),{childList:true});
  matchMedia('(max-width:700px)').addEventListener('change',layout);
 })();

@@ -507,6 +507,8 @@ body:not([data-region=""]) .hero,body:not([data-region=""]) #trip-finder,body:no
 .explore-story{margin:28px 0 44px;max-width:850px}.explore-story h3{font-size:28px;line-height:1.5;font-weight:500}.explore-story>p{line-height:1.9}.explore-photo{margin:20px 0}.explore-photo img{display:block;width:100%;max-height:440px;object-fit:cover;aspect-ratio:1.66}.explore-photo figcaption{font-size:14px;line-height:1.8;margin-top:12px}.explore-photo small{display:block;color:#67717a;font-size:12px}.explore-photo a{font-size:11px;color:#67717a}
 body:not([data-region=""]) .two-col{display:block}body:not([data-region=""]) .two-col>.story{max-width:850px}
 .senior-preference{display:none!important}
+.controls.trip-settings{display:flex;flex-wrap:wrap;align-items:end;gap:16px 28px;padding:18px 0;margin:0 0 24px;border-block:1px solid #cbd3d9}.trip-settings>div{display:flex;flex-direction:column;gap:8px}.trip-settings label{font-size:13px}.trip-settings select{min-width:140px;background:#fff;border:1px solid #b8c2ca;padding:10px 14px;min-height:44px}.trip-settings>span{font-size:12px;color:#66727b}.finder-trip-summary{font-size:13px;line-height:1.8;color:#425767;margin:12px 0}
+@media(max-width:700px){.controls.trip-settings{gap:12px;display:grid;grid-template-columns:1fr 1fr}.trip-settings>div{min-width:0}.trip-settings select{width:100%;min-width:0}.trip-settings>span{grid-column:1/-1}}
 /* The map floats above the page without reserving a sidebar. */
 .floating-map-panel{background:transparent;backdrop-filter:none}
 .floating-map-content .atlas-map{background:transparent}
