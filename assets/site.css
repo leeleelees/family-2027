@@ -541,7 +541,7 @@ footer.wrap.detail-footer{min-height:0;max-width:none;width:100%;padding:28px va
 @media(min-width:701px) and (max-width:1199px){
  body[data-region]{padding-top:0}
  .detail-layout{display:flex;flex-direction:column}
- .detail-layout .floating-map-panel{order:-1;position:sticky;inset:auto;top:0;transform:none;background:transparent;backdrop-filter:none}
+ .detail-layout .floating-map-panel{order:-1;position:sticky;inset:auto;top:0;transform:none;background:#fff;backdrop-filter:none;isolation:isolate}
 }
 @media(max-width:700px){
  footer.wrap.detail-footer{grid-template-columns:1fr;gap:12px;padding:24px 22px}
@@ -559,3 +559,4 @@ footer.wrap.detail-footer{min-height:0;max-width:none;width:100%;padding:28px va
 .travel-alert{background:#a52c30;color:#fff;padding:22px 26px;margin-top:12px}.travel-alert .travel-alert-kind{font-size:12px;font-weight:600;margin:0 0 10px;line-height:1.7}.travel-alert-kind span{font-weight:400;display:inline-block;margin-left:12px}.travel-alert h4{font-size:21px;font-weight:600;line-height:1.5;color:#fff;margin:0 0 12px}.travel-alert>p{font-size:14px;line-height:1.85;color:#fff;margin:8px 0;max-width:80em}.travel-alert-action{border-top:1px solid #ffffff55;padding-top:12px}.travel-alert-action strong{margin-right:6px}.travel-alert-sources{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px}.travel-alert-sources a{font-size:12px;color:#fff;text-decoration:underline;text-underline-offset:4px;line-height:1.8;padding-block:4px}.travel-alert a:focus-visible,.travel-alert-preview:focus-visible{outline:3px solid #fff;outline-offset:-5px}
 .travel-alert-preview{display:block;background:#a52c30;color:#fff;padding:16px 18px;margin:16px 0 8px}.travel-alert-preview span{display:block;font-size:11px;margin-bottom:7px}.travel-alert-preview strong{display:block;font-size:15px;font-weight:600;line-height:1.6}.travel-alert-preview small{display:block;font-size:11px;margin-top:10px}.timetable-sample-note{font-size:13px;line-height:1.8;color:#8c272b}
 @media(max-width:700px){.travel-alert{padding:18px}.travel-alert h4{font-size:18px}.travel-alert>p{font-size:13px}.travel-alert-kind span{display:block;margin:3px 0 0}.travel-alerts-heading h3{font-size:21px}.travel-alerts{margin-top:20px}.travel-alert-sources{gap:6px 14px}}
+.onsen-entry{display:flex;justify-content:space-between;align-items:center;gap:24px;background:#e8edf0;padding:28px 32px;margin-block:28px 48px}.onsen-entry h2{font-size:26px;font-weight:400}.onsen-entry p{margin:8px 0 0;font-size:14px}.onsen-entry a{white-space:nowrap;text-decoration:underline;text-underline-offset:5px}@media(max-width:700px){.onsen-entry{display:block;padding:22px}.onsen-entry a{display:inline-block;margin-top:18px}.onsen-entry h2{font-size:24px}}
