@@ -34,3 +34,6 @@
 .map-picker{display:none}
 @media(max-width:1000px){.map-picker{display:grid;font-size:14px;gap:8px;margin-block:16px}.map-picker select{background:#fff;border:0;padding:12px;min-height:48px;width:100%;color:inherit;font-size:14px}.stay-pin text{font-size:20px}.stay-pin rect{width:132px}.stay-section>.section-heading{display:flex;justify-content:space-between;align-items:start}.stay-section>.section-heading h2{text-align:left}}
 @media(max-width:700px){.stay-section>.section-heading{display:block}.stay-section>.section-heading p{text-align:left}}
+
+/* Paired room and private-bath photographs, matching the existing page. */
+.stay-gallery{display:grid;align-content:start;gap:20px;min-width:0}.stay-gallery figure{margin:0}.stay-photo-link{display:block;overflow:hidden}.stay-gallery img{display:block;aspect-ratio:1.65;object-fit:cover}.stay-gallery figcaption a{white-space:nowrap;text-underline-offset:3px}.stay-gallery a:focus-visible{outline:2px solid currentColor;outline-offset:4px}.stay-gallery .stay-photo-link:hover{transform:none}@media(max-width:700px){.stay-gallery{margin-bottom:26px;gap:18px}.stay-gallery figure{margin:0}}
